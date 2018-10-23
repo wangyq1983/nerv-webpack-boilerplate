@@ -31,3 +31,9 @@ A simple Webpack boilerplate with Nervjs.
 
 * Run in IE 8
     `npm run deploy`
+    
+    
+    ============
+    
+    使用了axios，发现ie8不支持， 
+    npm install --save babel-polyfill
