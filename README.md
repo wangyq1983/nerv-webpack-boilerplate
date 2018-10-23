@@ -37,3 +37,4 @@ A simple Webpack boilerplate with Nervjs.
     
     使用了axios，发现ie8不支持， 
     npm install --save babel-polyfill
+    import 'babel-polyfill';
