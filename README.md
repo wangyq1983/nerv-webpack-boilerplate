@@ -38,3 +38,24 @@ A simple Webpack boilerplate with Nervjs.
     使用了axios，发现ie8不支持， 
     npm install --save babel-polyfill
     import 'babel-polyfill';
+
+
+打包时自动去除console.log 
+
+webpack.config.js
+
+const uglifyJSPlugin = new UglifyJSPlugin({
+  uglifyOptions: {
+    ie8: true,
+    keep_fnames: true,
+    compress: {
+      warnings: false,
+      drop_console: true,
+      pure_funcs: ['console.log']
+    }
+  }
+});
+
+optimization: {
+    minimizer: [uglifyJSPlugin]
+  }
